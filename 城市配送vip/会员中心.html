@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员中心</title>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>物流配送</title>
+	<script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/vip.css">
+</head>
+<body>
+
+<!-- 网站头区域 -->
+	<div id="headerWrap" class="heighter">
+		<div class="header">
+			<div class="left">
+				<h1 class="logo"><img src="images/logo.png" alt="城市配送"></h1>
+			</div>
+
+ 			<div class="register">
+					<div class="btn-group">
+							  <button type="button" class="btn btn-primary">
+									<span class="glyphicon glyphicon-user"></span> 登录
+							  </button>
+							  <button type="button" class="btn btn-primary">
+							  		<span class="glyphicon glyphicon-star"></span> 免费注册
+							  </button>
+ 					</div>
+			</div><!--register结束-->
+
+
+			<div class="right">
+				<form class="form-inline hidden-xs" role="form" action="">
+					<div class="form-group">
+				 		<div class="input-group">
+						 	<div class="input-group-btn">
+				                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				                     淘货源 
+				                     <span class="caret"></span>
+				                  </button>
+				                  <ul class="dropdown-menu">
+				                     <li><a href="#">选车辆</a></li>
+				                     <li><a href="#">找仓库</a></li>
+				                     <li><a href="#">查订单</a></li>
+				                     <li class="divider"></li>
+				                     <li><a href="#">搜资讯</a></li>
+				                  </ul>
+              				</div><!-- input-group-btn -->
+							<input type="text" class="form-control" id="name" placeholder="请输入名称">
+			                    <span class="input-group-btn">
+			                  	    <button type="button" class="btn btn-primary">
+			  							<span class="glyphicon glyphicon-search"></span> 搜索go
+									</button>
+			               		</span>
+           		 		</div><!-- /input-group -->
+					</div><!--form-group-->
+				</form>
+			</div><!--right结束-->
+
+		</div><!--header-->
+	</div><!--headerWrap结束-->
+
+
+	<!-- vip nav-->
+	<div id="vip_nav">
+		
+			<div id="sub_nav">会员中心</div>
+
+		
+	</div>
+
+	<!-- vip menu-->
+	</div>
+	<div id="vip_content">
+		<div id="vip_menu">
+			<div id="border"></div>
+			<ul id="main_menu">
+			  <li>我的资源
+
+	              <ul class="sub_menu">
+				  		<li><a href="#">发布货源</a></li>
+				  		<li><a href="#">我的货源</a></li>
+				  		<li><a href="#">出租仓库</a></li>
+				  		<li><a href="#">我的仓库</a></li>
+				  		<li><a href="#">发布车源</a></li>
+				  		<li><a href="#">我的车源</a></li>
+				  		<li><a href="#">发布物流资源</a></li>
+				  	</ul>
+			  </li>
+			  	
+			  <li>我的账户
+				  <ul class="sub_menu">
+				  		<li><a href="#">我的订单</a></li>
+				  		<li><a href="#">订单跟踪</a></li>
+				  		<li><a href="#">我的的账单</a></li>
+				  		<li><a href="#">收支明细</a></li>
+				  		<li><a href="#">账户充值</a></li>
+				  		<li><a href="#">账户提现</a></li>
+				  		<li><a href="#">账户余额</a></li>
+				  	</ul>
+			  	</li>
+			  	
+			  <li>人才招聘
+				  <ul class="sub_menu">
+				  	 	<li><a href="#">企业招聘</a></li>
+				  	 	<li><a href="#">物流人才</a></li>
+
+				  	 </ul> 
+			  	 </li>
+			  	
+			  <li class="no_sub"><a href="#">登记末端网点</a></li>
+			  <li class="no_sub"><a href="#">物流招标</a></li>
+			  <li class="no_sub"><a href="#">信用等级</a></li>
+
+			  <li >企业网站
+				  <ul class="sub_menu">
+				  		<li><a href="#">企业网站设置</a></li>
+				  	</ul>
+			  	</li>
+			  	
+			  <li>我的资源登记
+			  <ul class="sub_menu">
+			  		<li><a href="#">登记我的车牌</a></li>
+			  		<li><a href="#">登记我的仓储</a></li>
+			  		<li><a href="#">登记我的设备</a></li>
+			  		<li><a href="#">登记我的托盘</a></li>
+
+			  	</ul></li>
+			  	
+			  <li>系统管理
+				  <ul class="sub_menu">
+				  		<li><a href="#">基本信息</a></li>
+				  		<li><a href="#">修改密码</a></li>
+				  	</ul>
+			  	</li>
+			  	
+
+			</ul>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			
+			
+			$("#main_menu").find("li").mouseover(function(){
+				var _top=$(this).offset().top;
+
+				
+
+                $(this).find(".sub_menu").css({
+                	"top":_top-144+"px",
+                	"display":"block"
+                	
+                });
+                $("#border").css({
+                	"top":_top-143+"px",
+                	"display":"block"
+                });
+
+			});
+			$("#main_menu").find("li").mouseout(function(){
+				
+                $(this).find(".sub_menu").css({
+                	"display":"none"
+                });
+                $("#border").css({
+       
+                	"display":"none"
+                });
+
+			});
+
+
+		});
+
+	</script>
+	
+</body>
+</html>
