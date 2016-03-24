@@ -187,6 +187,10 @@ background-color:#F7F7F7 ;
     border-top:2px solid #2677B1 ;
     outline: 1px solid #D1D1D1;
     display: none;
+	position:absolute;
+	z-index:999;
+	width:156px;
+	background-color:white;
 }
 .h_sub_menu>li>a{
     display: block;
