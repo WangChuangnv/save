@@ -9,9 +9,16 @@
 	<script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/move.js"></script>
-	<script src="js/index.js"></script>	
+	<script src="js/index.js"></script>
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.data-img div{
+			display: inline-block;
+
+		}
+	</style>
 </head>
 <body>
 	<div id="main">
@@ -252,13 +259,13 @@
     
     <!--data-statistics-->
 	<div id="data-statistics">
-		<h2>物流数据统计</h2>
+		<h2></h2>
 		<div class="data-img">
-			<img src="images/data.png" />
-			<img src="images/data1.png" />
-			<img src="images/data2.png" />
-			<img src="images/data3.png" />
-			<img src="images/data4.png" />
+			<div id="pie1" style="width:236px; height:220px;"></div>
+			<div id="pie2" style="width:236px; height:220px;"></div>
+			<div id="bar1" style="width:236px; height:220px;"></div>
+			<div id="bar2" style="width:236px; height:220px;"></div>
+			<div id="line1" style="width:236px; height:220px;"></div>
 		</div>	
 	</div>
 	<!--data-statistics结束-->	
@@ -885,24 +892,20 @@
 		<a href="#"><span>返回顶部</span></a>
 		
 	</div><!-- elevator -->
-	
-	
+
+	<script src="js/echarts-all.js"></script>
+	<script src="js/myChart.js"></script>
   
 <script>
-
-
-
- $(function(){
-
-
-
-
-
-
-
-
-   
-})
+	
+	$(function(){
+		$('#h_nav_ul').find('li').mouseover(function(){
+			$(this).find('.h_sub_menu').show();
+		});
+		$('#h_nav_ul').find('li').mouseout(function(){
+			$(this).find('.h_sub_menu').hide();
+		});
+	});
 </script>
 
 

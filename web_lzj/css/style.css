@@ -137,13 +137,15 @@ a,a:hover{
 
 /***网站nav部分****/
 #head_nav{
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
 #h_nav_ul{
     width: 100%;
 	border-bottom:2px solid #2677B1;
+	position: relative;
+	z-index: 999;
 }
 #h_nav_ul>li{
 	text-align: center;
@@ -187,10 +189,7 @@ background-color:#F7F7F7 ;
     border-top:2px solid #2677B1 ;
     outline: 1px solid #D1D1D1;
     display: none;
-	position:absolute;
-	z-index:999;
-	width:156px;
-	background-color:white;
+    background-color: #F7F5F5;
 }
 .h_sub_menu>li>a{
     display: block;
@@ -414,7 +413,7 @@ background-color:#F7F7F7 ;
 
 /******menu-btn******/
 #menu-btn{
-	width: 1200px;
+	max-width: 1200px;
 	height: 105px;
 	border: 1px solid #cfcfcf;
 	margin: 10px auto;
@@ -448,19 +447,13 @@ background-color:#F7F7F7 ;
 
 /******data-statistics物流数据统计部分******/
 #data-statistics{ 
-	width: 1200px;
+	max-width: 1200px;
 	border: 1px solid #cfcfcf;
 	margin: 10px auto;
 }
 #data-statistics h2{
-	color: #FFF;
-    font-size: 14px;
-   /* font-weight: bold;*/
-    height: 32px;
-    line-height: 32px;
-    border-bottom: 1px solid #cfcfcf;
+	height: 2px;
     background-color: #2677B1;
-    padding-left: 10px;
 }
 #data-statistics div.data-img{
 	margin: 5px 1px;
@@ -474,7 +467,7 @@ background-color:#F7F7F7 ;
 /******content内容部分*******/
 
 #content{
-	width: 1200px;
+	max-width: 1200px;
     /* height: 600px; */
     /* background-color: #cfcfcf; */
     margin: 10px auto;
@@ -568,7 +561,7 @@ background-color:#F7F7F7 ;
 /****content-two部分*****/
 
 #content-two{
-	width: 1200px;
+	max-width: 1200px;
 	/*height: 600px;*/
 	margin: 10px auto;
 	
@@ -586,7 +579,7 @@ background-color:#F7F7F7 ;
 /****content-three部分*****/
 
 #content-three{
-	width: 1200px;
+	max-width: 1200px;
 	/*height: 600px;*/
 	margin: 10px auto;
 	
@@ -703,6 +696,7 @@ background-color:#F7F7F7 ;
     width: 164px;
     /* background-color: red; */
     left: -166px;
+    top: 100px;
     transition: left 1s;
 }
 #deliveryMap .tool:hover{
@@ -768,7 +762,7 @@ background-color:#F7F7F7 ;
 /****main-job*****/
 
 #main-job{
-	width: 1200px;
+	max-width: 1200px;
 	/*height: 600px;*/
 	margin: 10px auto;
 	/*background: red;*/
@@ -889,8 +883,9 @@ background-color:#F7F7F7 ;
 
 /***footer*****/
 .footer{
-	width: 1200px;
+	max-width: 1200px;
 	margin: 10px auto;
+
 
 }
 .footer .footer_list{
@@ -925,22 +920,75 @@ background-color:#F7F7F7 ;
 
 .elevator{
 	position: absolute;
-    top: 0px;
+    top: 500px;
     right: 0px;
     width: 70px;
     background-color: #F0EEEB;
+    display: none;
 }
 
 .elevator>a{
-	text-align: center;
+	border: 1px solid #cfcfcf;
+    text-align: center;
     display: block;
     width: 70px;
     height: 30px;
     line-height: 30px;
+    border-bottom: none;
 }
 .elevator>a:hover{
-	background: red;
+	background: aliceblue;
+
 }
 .elevator>a>span{
 	color: #CA441C;
 }
+.elevator>a>span:hover{
+	color: blue;
+}
+
+
+
+
+/****special馆*******/
+/*.special{
+	width: 1200px;
+  	margin: 10px auto;
+  	background: antiquewhite;
+
+}
+.special::after{
+	display: block;
+	content:'';
+	clear: both;
+	overflow: hidden;
+}
+.special>div{
+    float: left;
+    margin-left: 64px;
+    margin-bottom: 20px;
+    width: 222px;*/
+    /* height: 180px; */
+  /*  border: 1px solid red;
+    border-radius: 12px;
+}
+.special>div>a{
+	border-radius: 12px;
+    overflow: hidden;
+    display: block;
+    width: 220px;
+    height: 162px;
+}
+.special>div>a>img{
+	width: 220px;
+    height: 166px;
+}
+.special>div>dl{
+
+}
+.special>div>dl>dt{
+	display: inline-block;
+}
+.special>div>dl>dd{
+	display: inline-block;
+}*/
