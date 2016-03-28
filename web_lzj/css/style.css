@@ -109,8 +109,8 @@ a,a:hover{
 }
 #headerWrap .header{
 	max-width: 1200px;
-	
 	margin: 0 auto;
+	position: relative;
 	
 }
 #headerWrap .header .left{
@@ -122,7 +122,7 @@ a,a:hover{
 #headerWrap .header .right{
 	padding-top: 54px;
 	width: 360px;
-	margin-left: 134px;
+	margin-left: 238px;
 	float: left;
 }
 
@@ -134,7 +134,21 @@ a,a:hover{
 	float: right;
 	padding-top: 54px;
 }
-
+#headerWrap .header .select_option{
+	position: absolute;
+    top: 53px;
+    left: 470px;
+   
+}
+#headerWrap .header .select_option>select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background:white url(../images/arrow.png) no-repeat 50px center;
+	width: 68px;
+	height: 36px;
+    border-radius: 4px;
+    border:1px solid #cfcfcf;
+}
 /***网站nav部分****/
 #head_nav{
 	max-width: 1200px;
@@ -166,9 +180,13 @@ a,a:hover{
     width: 249px;
     background-color: #2677B1;
     color:#F7F7F7;
+
 }
 #h_nav_ul>li:first-child a{
+	
     color:#EFEFEF!important;
+
+
 }
 #h_nav_ul>li:first-child a:hover{
     color: #F7F7F7!important;
@@ -947,7 +965,106 @@ background-color:#F7F7F7 ;
 	color: blue;
 }
 
+/*会员中心*/
+#vip_content::after{
+	display: block;
+	content: '';
+	overflow: hidden;
+	clear: both;
+}
+#vip_content{
+	width: 1200px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+#vip_left{
+	width: 200px;
+	height: auto;
+	float: left;
+}
 
+#vip_right{
+	width: 995px;float: right
+}
+#sub_nav{
+	background-color: #2677B1;
+	color: #F7F7F7;
+	height: 32px;
+	width: 200px;
+	text-align: center;
+	padding-top: 6px;
+}
+#vip_menu{
+	width: 200px;
+	border: 1px solid #CFCFCF;
+	position: relative;
+}
+#vip_menu ul li{
+padding:8px;
+height: 37px;
+text-align: center;
+border-top: 1px solid #CFCFCF;
+
+}
+
+#vip_menu ul li:first-child{
+border: none;
+}
+
+.sub_menu{
+	background-color: white;
+	position: absolute;
+	top:0;
+	left: 198px;
+	width: 200px;
+	height: auto;
+	border: 1px solid #2677B1;
+	display: none;
+	z-index:2;
+
+}
+.sub_menu>li{
+	border: none !important;
+	height: 37px !important;
+	padding:8px;
+}
+#main_menu>li:hover{
+	border: none !important;
+	outline:1px solid #2677B1;
+}
+
+.no_sub:hover{
+	background-color: #2677B1;
+	color: #FFFFFF ;
+	box-sizing: border-box;
+	border: 2px solid #FFFFFF;
+}
+#border {
+	width: 1px;
+	height: 37px;
+	background-color: #FFFFFF;
+	position: absolute;
+	left:198px;
+	top:0px;
+	z-index:3;
+	display: none;
+
+}
+.sub_menu>li:hover{
+background-color:#E3F3F5;
+}
+
+.no_sub>a{
+	display: block;
+	text-align: center;	
+   color: #666666 !important;
+}
+.no_sub>a:link {color: #FF0000} 
+.no_sub>a:visited {color: #2677B1;}  /* 已访问的链接 */
+.no_sub>a:hover{
+	color:#FFFFFF !important;
+}
+.no_sub>a:active {color: #0000FF}
 
 
 /****special馆*******/
