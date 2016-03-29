@@ -141,51 +141,70 @@
         <form id="news_release1">
             <fieldset>
                 <legend>货物信息 <span id="sub_legend">   为了货物安全, 请填写完整、准确的信息</span></legend>
+                <table>
+                    <tr>
+                        <td>
+                        <label for="goods_name">货物名称：</label>
+                        <input type="text" id="goods_name"></td>
+                        <td>
+                            <label for="goods_volume">货物体积：</label>
+                            <input type="text" id="goods_volume">
+                            <span>(单位m^3)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             <label for="goods_name">货物重量：</label>
+                            <input type="text" id="goods_weight">
+                            <span>(单位t)</span>
+                        </td>
+                        <td>
+                            <label for="deadline"><p style="width: 14px;float: left;"></p>有效期：</label>
+                            <input type="text" id="deadline">
+                        </td>
+                    </tr>
 
-                <label for="goods_name">货物名称：</label>
-                <input type="text" id="goods_name">
+                </table>
 
-
-
-                <label for="goods_volume">货物体积：</label>
-                <input type="text" id="goods_volume">
-                <span class="unit">(单位m^3)</span>
-                <br>
-
-
-                <label for="goods_name">货物重量：</label>
-                <input type="text" id="goods_weight">
-                <span class="unit">(单位t)</span>
-
-                <label for="deadline"><p style="width: 14px;float: left;"></p>有效期：</label>
-                <input type="text" id="deadline">
             </fieldset>
 
             <fieldset>
                 <legend>始发地</legend>
-                <label for="location">所属区域：</label>
-                <select id="location">
-                    <option value="1">请选择</option>
-                    <option value="2">师大</option>
-                </select>
-
-                <br>
-                <label for="goods_send"><span class="red_start">*</span>发货地址：</label>
-                <input type="text" id="goods_send">
+                <table>
+                    <tr>
+                        <td> <label for="location">所属区域：</label>
+                            <select id="location">
+                                <option value="1">请选择</option>
+                                <option value="2">师大</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="goods_send"><span class="red_start">*</span>发货地址：</label>
+                            <input type="text" id="goods_send">
+                        </td>
+                    </tr>
+                </table>
 
             </fieldset>
 
             <fieldset>
                 <legend>目的地</legend>
-                <label for="destination">所属区域：</label>
-                <select id="destination">
-                    <option value="1">请选择</option>
-                    <option value="2">233</option>
-                </select>
-
-                <br>
-                <label for="goods_get"><span class="red_start">*</span>收货地址：</label>
-                <input type="text" id="goods_get">
+                <table>
+                    <tr>
+                        <td><label for="destination">所属区域：</label>
+                            <select id="destination">
+                                <option value="1">请选择</option>
+                                <option value="2">233</option>
+                            </select>
+                        </td>
+                        </tr>
+                    <tr>
+                        <td> <label for="goods_get"><span class="red_start">*</span>收货地址：</label>
+                            <input type="text" id="goods_get"></td>
+                    </tr>
+                </table>
 
             </fieldset>
 
@@ -197,43 +216,113 @@
 
             <fieldset>
                 <legend>车型要求</legend>
-                <label for="car_type">车型要求：</label>
-                <select id="car_type" class="marginRight">
-                    <option value="1">自卸车</option>
-                    <option value="2">233</option>
-                </select>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="car_type">车型要求：</label>
+                            <select id="car_type" class="marginRight">
+                                <option value="1">自卸车</option>
+                                <option value="2">233</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="car_size">车长要求：</label>
+                            <select id="car_size">
+                                <option value="1">请选择</option>
+                                <option value="2">233</option>
+                            </select>
+                            <span class="words_af">至</span>
 
-                <label for="car_size">车长要求：</label>
-                <select id="car_size">
-                    <option value="1">请选择</option>
-                    <option value="2">233</option>
-                </select>
-                <span class="words_af">至</span>
+                            <select id="car_size2"class="input_af">
+                                <option value="1">请选择</option>
+                                <option value="2">233</option>
+                            </select>
+                            <span class="words_af">(单位米)</span>
 
-                <select id="car_size2"class="input_af">
-                    <option value="1">请选择</option>
-                    <option value="2">233</option>
-                    </select>
-                <span class="words_af">(单位米)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="transf_type">运输类型：</label>
+                            <select id="transf_type">
+                                <option value="1">整车</option>
+                                <option value="2">233</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="transf_price">期待运价：</label>
+                            <input type="text" id="transf_price" class="short_input">
 
-<br>
-                <label for="transf_type">运输类型：</label>
-                <select id="transf_type" class="marginRight">
-                    <option value="1">整车</option>
-                    <option value="2">233</option>
-                </select>
+                            <select id="transf_price2">
+                                <option value="1">元/吨</option>
+                                <option value="2">233</option>
+                            </select>
+                            <span>(不填表电议)</span>
+                        </td>
+                    </tr>
+                </table>
 
-                <label for="transf_price">期待运价：</label>
-                <input type="text" id="transf_price" class="no_margin_inp">
-
-
-
-                <select id="transf_price2"class="input_af">
-                    <option value="1">元/吨</option>
-                    <option value="2">233</option>
-                </select>
-                <span class="words_af">不填表电议</span>
             </fieldset>
+
+            <fieldset>
+                <legend>详细描述</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="g_category">货物类别：</label>
+                            <select id="g_category" >
+                                <option value="1">不限</option>
+                                <option value="2">233</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <label for="g_type">货物类型：</label>
+                            <select id="g_type">
+                                <option value="1">重货</option>
+                                <option value="2">233</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="goods_cycle">发货周期：</label>
+                            <input type="text" id="goods_cycle" class="short_input">
+                            <span>到</span>
+                            <input type="text" id="goods_cycle1" class="short_input">
+                        </td>
+                        <td>
+                            <label for="g_times">发货频次：</label>
+                            <select id="g_times" >
+                                <option value="1">一天一次</option>
+                                <option value="2">233</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="g_area">
+                            <label for="g_describe" >详细描述：</label>
+                            <textarea placeholder="限制在250个汉字内(500个字符)" rows="3" cols="20" id="g_describe"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <label for="map_mark">地图标注：</label>
+                            <input type="text" id="map_mark">
+                            <button type="button" class="btn btn-primary btn-xs">插入</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>(点击插入地图，在地图上标记红点后，点击地图上的提交按钮)</span></td>
+                    </tr>
+                </table>
+
+            </fieldset>
+           <div id="g_sure">
+               <button type="button" class="btn btn-primary">确认发布</button>
+           </div>
+
+
         </form>
 
 
