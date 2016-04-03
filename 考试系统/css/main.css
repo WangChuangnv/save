@@ -1,0 +1,127 @@
+body{
+    font-family: Î¢ÈíÑÅºÚ;
+    color: #666;
+
+}
+body,h2{
+    margin: 0;
+    padding: 0;
+}
+
+#top{
+    width: 100%;
+    height: 90px;
+    background: #123555;
+    margin: 0 auto;
+
+}
+#top h2{
+    margin: 0 auto;
+    width: 1200px;
+    letter-spacing: 40px;
+    color: #EFEFEF;
+    text-align: center;
+    height: 90px;
+    line-height: 90px;
+}
+#content{
+    width: 1200px;
+    margin: 10px auto;
+    border-top: 3px solid #123555;
+    padding-top: 10px;
+}
+/*----------------------menu----------------*/
+a{
+    text-decoration: none !important;
+}
+ul{
+    list-style: none;
+}
+.treeList{
+    padding: 0 !important;
+    font-size: 15px;
+    margin-bottom: 1px;
+}
+.treeList>li{
+   border-bottom: 1px dashed #122b40;
+    padding: 10px 5px 10px 65px;
+}
+.treeNode li{
+    padding: 5px;
+    list-style: none;
+}
+#left_content{
+    background-color: #EFEFEF;
+    width: 230px;
+    border-top: 5px solid #123555;
+    outline: 1px solid #dddddd;
+    float:left;
+    border-bottom: 5px solid #F4E0A4;
+
+}
+#right_content{
+    width: 955px;
+    height: auto;
+    border-top: 5px solid #123555;
+    margin-left: 245px;
+
+}
+
+/*ËÑË÷¿ò*/
+#list_warp{
+    margin: 0 auto;
+}
+
+#search_bg{
+    width: 100%;
+    height: 50px;
+    background-color: #F4E0A4;
+    padding-top:12px;
+    padding-left: 200px;
+}
+#list_search{
+    text-align: center;
+    width: 416px;
+    height: 27px;
+    border: 1px solid #016664;
+    background-color: white;
+
+}
+
+
+#search_news{
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+    font-size: 14px;
+    padding-top: 3px;
+    border-right: 1px #123555 dashed;
+    color: #123555;
+}
+#list_form>input{
+    border: none;
+    padding: 0;
+}
+#search_input{
+    outline: none;
+    width: 250px;
+    height: 25px;
+}
+#search_submit{
+    width: 67px;
+    height: 25px;
+    background-color: #123555;
+    color: white;
+}
+
+/*----------*/
+#page-link a{ display: inline-block; padding:0 7px; line-height: 22px; text-align: center; margin-right: 5px; }
+#page-link a.yangshi{ color: #FFF; background: #123555; }
+#page-link a:hover{ color: #333; background: #DDD; }
+
+#turn-page .record{ display: inline-block; padding: 10px; }
+.page-btnLink{ float: right; margin-top: 10px; }
+#turn-page #page-tum{ width: 40px; }
+#turn-page #page-btn{ width: 60px; height: 25px; background: #123555; border: none; color: #FFF; border-radius: 3px; box-shadow: 1px 1px 3px #cfcfcf; }
+#turn-page span.num{ display: inline-block; padding: 0 5px; }
+#page-link{ margin-top: 10px; float: right; }
