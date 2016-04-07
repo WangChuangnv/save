@@ -178,7 +178,7 @@ a,a:hover{
     margin-right: 2px;
     margin-left: 0 !important;
     width: 249px;
-    background-color: #2677B1;
+    background:url(../images/red.png);
     color:#F7F7F7;
 
 }
@@ -231,7 +231,7 @@ background-color:#F7F7F7 ;
     /* height: 800px; */
     margin: 0px auto;
     /* background-color: red; */
-    border: 1px solid #cfcfcf;
+   /* border: 1px solid #cfcfcf;*/
     /* margin-bottom: 100px; */
     padding-bottom: 6px;
     /*margin-bottom: 30px;*/
@@ -275,17 +275,13 @@ background-color:#F7F7F7 ;
 
 }
 #banner-block .tab-content div{
-	border-right: 1px solid #cfcfcf;
-    width: 247px;
+	width: 247px;
     height: 254px;
-    /* background-color: #EDE6E8; */
-    /* clear: both; */
     position: absolute;
     top: 30px;
-    /* border-top: 1px solid; */
-    border-bottom: 1px solid #cfcfcf;
     overflow: hidden;
     display: none;
+    border: 1px solid #cfcfcf;
 }
 
 #banner-block .tab-content .tab-1{
@@ -300,7 +296,7 @@ background-color:#F7F7F7 ;
 }
 
 
-}
+
 #banner-block .tab-content .tab-1>ul{
 	/*background: linear-gradient(to right, #D4D6DB , #FAEEEE);*/
 
@@ -355,6 +351,7 @@ background-color:#F7F7F7 ;
 	position:absolute; 
 	top:0; 
 	left:0;
+	overflow: hidden;
 }
 #banner-block .banner ol{
 	z-index:2;
@@ -389,45 +386,27 @@ background-color:#F7F7F7 ;
     float: right;
     border-right: none;
 }
-
-#banner-block .delivery>div{
-	width: 219px;
-    /* border-radius: 4px; */
-    /*border: 1px solid #0B2131;*/
-    /* padding: 10px; */
-    position: relative;
-    height: 138px;
-}
-#banner-block .delivery>div>img{
-	display: inline-block;
-    position: absolute;
-    top: 34px;
-    left: 15px;
-}
-
-#banner-block .delivery div span>a{
-	display: inline-block;
-    font-size: 24px;
-    position: absolute;
-    top: 50px;
-    left: 100px;
-}
-#banner-block .delivery div.cargo-bg-color{
-	background-color: #E6E6E6;
-}
-
-#banner-block .delivery div.send-bg-color{
-	background-color: #CBC1BF;
-}
-
-#banner-block .delivery div span>a.cargo-color{
-	color: #FF3A1F;
-}
-
-#banner-block .delivery div span>a.send-color{
-	color: #0B78EF;
+#banner-block .delivery .cargo,#banner-block .delivery .send{
+	overflow: hidden;
+	width: 220px;
+	height: 138px;
 
 }
+#banner-block .delivery .cargo>a,#banner-block .delivery .send>a{
+	display: block;
+	width: 220px;
+	height: 138px;
+}
+#banner-block .delivery .cargo>a>img,#banner-block .delivery .send>a>img{
+	width: 220px;
+	height: 138px;
+	transition: all 0.5s;
+}
+#banner-block .delivery .cargo>a>img:hover,#banner-block .delivery .send>a>img:hover{
+	transform: scale(1.1);
+	
+}
+
 
 /******menu-btn******/
 #menu-btn{
@@ -439,30 +418,28 @@ background-color:#F7F7F7 ;
 }
 #menu-btn dl{
 	float: left;
-	width: 100px;
-	height: 90px;
-	margin: 5px 20px;
-	border: 1px solid #cfcfcf;
-	padding: 5px;
-	border-radius: 15px;
-	box-shadow: 1px 1px 3px #cfcfcf;
+    width: 100px;
+    height: 90px;
+    margin: 5px 20px;
+   
 }
-#menu-btn dl dd img{
+/*#menu-btn dl dd img{
 	width: 60px;
 	height: 50px;
 	line-height: 50px;
 	margin: 0 13px;
-}
-#menu-btn dl dt{
+}*/
+/*#menu-btn dl dt{
 	width: 90px;
 	height: 30px;
 	margin: 5px 22px;
+}*/
+#menu-btn>dl>a{
+	
 }
-#menu-btn dl dt a{
-	color: #000;
-	font-size: 14px;
-}
+#menu-btn>dl>a>img{
 
+}
 /******data-statistics物流数据统计部分******/
 #data-statistics{ 
 	max-width: 1200px;
@@ -1056,7 +1033,10 @@ background-color:#E3F3F5;
 
 .no_sub>a{
 	display: block;
-	text-align: center;	
+	
+	
+	text-align: center;
+	
    color: #666666 !important;
 }
 .no_sub>a:link {color: #FF0000} 
