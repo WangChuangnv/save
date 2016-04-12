@@ -125,3 +125,28 @@ ul{
 #turn-page #page-btn{ width: 60px; height: 25px; background: #123555; border: none; color: #FFF; border-radius: 3px; box-shadow: 1px 1px 3px #cfcfcf; }
 #turn-page span.num{ display: inline-block; padding: 0 5px; }
 #page-link{ margin-top: 10px; float: right; }
+
+
+/*-------------------------*/
+#list_table{
+    text-align: center;
+    margin: 40px 40px 70px 40px;
+}
+#list_table table th{
+    text-align: center;
+}
+#list_table table th:first-child{
+    min-width: 400px;
+}
+#list_table table th{
+    min-width: 150px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #123555;
+    color: white;
+}
+#list_table table td{
+    height: 30px;
+    line-height: 30px;
+    background-color: #EFEFEF;
+}
