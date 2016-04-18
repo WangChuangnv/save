@@ -124,41 +124,26 @@
             </div><!--list_search-->
         </div><!--search_bg-->
 
-        <div id="list_table">
-            <table border="1">
-                <tr>
-                    <th>标题</th>
-                    <th>类型信息</th>
-                    <th>发布时间</th>
-                    <th>浏览数</th>
-                </tr>
-                <tr>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xx</td>
-                </tr>
-                <tr>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xx</td>
-                </tr>
-                <tr>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xx</td>
-                </tr>
-                <tr>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xxxxxxxxxx</td>
-                    <td>xx</td>
-                </tr>
-            </table>
+        <div class="list_tab">
+            <h5>试卷名</h5>
+            <ul class="tab_head">
+                <li index="1" class="click_state">题目</li>
+                <li index="2">答案</li>
+                <li index="3">详解</li>
+            </ul>
 
-        </div> <!--list_table-->
+            <div class="list_tab_body show">
+                这里是题目
+            </div>
+
+            <div class="list_tab_body">
+                这里是答案
+            </div>
+            <div class="list_tab_body" >
+                这里是详解
+            </div>
+        </div>
+
 
         <div id="turn-page">
             <div class="record">
@@ -166,8 +151,8 @@
                 每页<span class="totalRecords num">10</span>条
             </div>
                         <span class="page-btnLink">
-                            <input type="text" value="1" id="page-tum"></input>
-                            <input type="button" value="跳转到" id="page-btn"></input>
+                            <input type="text" value="1" id="page-tum">
+                            <input type="button" value="跳转到" id="page-btn">
                         </span>
                         <span id="page-link">
                         </span>

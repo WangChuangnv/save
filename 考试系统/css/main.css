@@ -3,7 +3,7 @@ body{
     color: #666;
 
 }
-body,h2{
+body,h2,h5,ul,li,div{
     margin: 0;
     padding: 0;
 }
@@ -128,25 +128,50 @@ ul{
 
 
 /*-------------------------*/
-#list_table{
+.list_tab{
     text-align: center;
     margin: 40px 40px 70px 40px;
+    border: 1px solid #123555;
+    position: relative;
+    height: 150px;
 }
-#list_table table th{
-    text-align: center;
-}
-#list_table table th:first-child{
-    min-width: 400px;
-}
-#list_table table th{
-    min-width: 150px;
-    height: 35px;
-    line-height: 35px;
+.list_tab h5{
     background-color: #123555;
-    color: white;
+    color:#EFEFEF;
+    padding: 5px;
+    letter-spacing: 20px;
 }
-#list_table table td{
-    height: 30px;
-    line-height: 30px;
+.tab_head{
+
     background-color: #EFEFEF;
+    height: 25px;
+}
+.tab_head::after{
+    display: block; content: ""; width: 0; clear: both;
+}
+.tab_head li{
+    float: left;
+    margin-right: 5px;
+    padding: 2px 40px;
+    color: #123555;
+}
+.tab_head li:hover{
+    border-bottom: 3px solid #123555;
+
+}
+.list_tab_body{
+    text-align: left;
+    width: 873px;
+    height: 98px;
+    position: absolute;
+    left: 0px;
+    top:50px;
+    display: none;
+    overflow: auto;
+}
+.show{
+    display: block;
+}
+.click_state{
+    background-color: #DDDDDD;
 }
