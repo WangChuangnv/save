@@ -12,7 +12,7 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/vip.css">
+	
 </head>
 <body>
 
@@ -144,42 +144,52 @@
 			</ul>
 		</div>
 	</div>
-	<script>
+	<!-- <script>
 		$(function(){
 			
-			
-			$("#main_menu").find("li").mouseover(function(){
-				var _top=$(this).offset().top;
-
-				
-
-                $(this).find(".sub_menu").css({
-                	"top":_top-144+"px",
-                	"display":"block"
-                	
-                });
-                $("#border").css({
-                	"top":_top-143+"px",
-                	"display":"block"
-                });
-
-			});
-			$("#main_menu").find("li").mouseout(function(){
-				
-                $(this).find(".sub_menu").css({
-                	"display":"none"
-                });
-                $("#border").css({
-       
-                	"display":"none"
-                });
-
-			});
-
-
-		});
-
-	</script>
+			var mMenu=$("#main_menu");
+			var m_top=mMenu.offset().top;
+			var lis=mMenu.find("li");
+			console.log(lis);
+			 lis.mouseover(function(){
+				 
+				 if(this.className=="no_sub"){
+						
+					 }else{
+						 
+						var _top=$(this).offset().top;
+						
+						$(this).find(".sub_menu").css({
+							"top":_top-m_top-1+'px',
+							"display":"block"
+	               			 });
+						$("#border").css({
+							"top":_top-m_top,
+							"display":"block"
+						});
+				 	}        
 	
+			});
+			
+			lis.mouseout(function(){
+				 if(this.className=="no_sub"){
+						
+					 }else{ 
+					 	$(this).find(".sub_menu").css({
+	                	 	"display":"none"
+	                		});
+	                		$("#border").css({
+							"display":"none"
+						});
+					 }
+	               
+	              
+			});
+	
+	
+		});
+	
+	</script> -->
+	 <script src="js/menu.js"></script>
 </body>
 </html>
