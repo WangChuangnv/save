@@ -1,0 +1,70 @@
+@charset"utf-8";
+
+@bc:red;
+
+
+#first{
+	width:100px;
+	height:100px;
+	background:@bc;
+	.border;
+
+}
+
+.border{
+	border:1px solid #123555;
+	.border2;
+}
+
+.border3{
+	.border2(@width:200px);
+}
+
+.border2(@width:100px){
+	   width:@width;
+	}
+
+//匹配模式
+.triangle(top,@w:5px,@c:#ccc){
+	border-width:@w;
+	border-color: transparent transparent @c transparent;
+	border-style:dashed dashed solid dashed;
+}	
+
+.trangle(bottom,@w:5px,@c:#ccc){
+	border-width:@w;
+	border-color: @c transparent transparent transparent;
+	border-style:solid dashed dashed dashed;
+}
+
+.sanjiao{
+	.triangle(top);
+}
+
+
+//运算
+@t:300px;
+.box_0{
+	width:@t+20;//或width:@t+20px;只要有一个带单位即可
+}
+
+
+//嵌套
+ul{
+	background:yellow;
+	li{
+	background:blue;
+	}
+}
+
+.border_arg(@w:30px,@c:red,@x:solid){
+	border:@arguments;
+}
+.test_arguments{
+	.border_arg(40px);
+}
+
+//避免编译
+.test_3{
+	width:~'calc(300px-30px)';
+}
