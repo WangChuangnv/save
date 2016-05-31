@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员中心交易管理货源详情</title>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bread.css">
+	<link rel="stylesheet" href="css/common.css">
+	<!-- <link rel="stylesheet" href="css/vip.css"> -->
+	<script>
+		$(function(){
+
+		$('#lease-table>a').click(function(){
+				$('#lease-table>div').hide();
+				$('#lease-table>div').eq($(this).index()).show();
+				// alert($(this).index());
+			});	
+})
+
+	</script>
+</head>
+<body>
+
+<!-- 网站头区域 -->
+	<div id="headerWrap">
+		<div class="header">
+			<div class="left">
+				<h1 class="logo"><img src="images/logobanner.png" alt="城市配送"></h1>
+			</div>
+
+ 			<!-- <div class="register">
+					<div class="btn-group">
+							  <button type="button" class="btn btn-primary">
+									<span class="glyphicon glyphicon-user"></span> 登录
+							  </button>
+							  <button type="button" class="btn btn-primary">
+							  		<span class="glyphicon glyphicon-star"></span> 免费注册
+							  </button>
+ 					</div>
+			</div> --><!--register结束-->
+
+					<div class="select_option">
+						<select name="" id="">
+				               	<option value="" selected="selected">淘货源</option>
+				               	<option value="">选车辆</option>
+				               	<option value="">找仓库</option>
+				               	<option value="">查订单</option>
+				               	<option value="">搜资讯</option>
+						</select>
+					</div>
+			<div class="right">
+				<form class="form-inline hidden-xs" role="form" action="">
+					<div class="form-group">
+				 		<div class="input-group">
+								<input type="text" class="form-control" id="name" placeholder="请输入名称">
+			                    <span class="input-group-btn">
+			                  	    <button type="button" class="btn btn-primary">
+			  							<span class="glyphicon glyphicon-search"></span> 搜索go
+									</button>
+			               		</span>
+           		 		</div><!-- /input-group -->
+					</div><!--form-group-->
+				</form>
+			</div><!--right结束-->
+
+		</div><!--header-->
+	</div><!--headerWrap结束-->
+
+
+
+	<!-- vip -->
+
+	<div id="vip_content">
+	<div id="vip_left">
+		<div id="sub_nav">会员中心</div>
+		<div id="vip_menu">
+
+			<div id="border"></div>
+			<ul id="main_menu">
+			  <li>账号管理
+
+	              	<ul class="sub_menu">
+				  		<li><a href="#">基本信息</a></li>
+				  		<li><a href="#">账号安全</a></li>
+				  		<li><a href="#">企业主页设置</a></li>
+				  	</ul>
+			  </li>
+			  	
+			  <li>资金管理
+				  <ul class="sub_menu">
+				  		<li><a href="#">账号余额</a></li>
+				  		<li><a href="#">账号充值</a></li>
+				  		<li><a href="#">账号提现</a></li>
+				  		<li><a href="#">交易记录</a></li>
+				  		<li><a href="#">银行卡管理</a></li>
+				  		
+				  	</ul>
+			  	</li>
+			  	
+			  <li>交易管理
+				  <ul class="sub_menu">
+				  	 	<li><a href="#">我的货源</a></li>
+				  	 	<li><a href="#">我的车源</a></li>
+				  	 	<li><a href="#">我的订单</a></li>
+
+				  	 </ul> 
+			  	 </li>
+			  	
+			 <!--  <li class="no_sub"><a href="#">登记末端网点</a></li>
+			  <li class="no_sub"><a href="#">物流招标</a></li>
+			  <li class="no_sub"><a href="#">信用等级</a></li> -->
+
+			  <li >物流资源
+				  <ul class="sub_menu">
+				  		<li><a href="#">我的车辆</a></li>
+				  		<li><a href="#">仓储出租</a></li>
+				  		<li><a href="#">设备供应</a></li>
+				  		<li><a href="#">设备需求</a></li>
+				  		<li><a href="#">末端网点</a></li>
+				  	</ul>
+			  	</li>
+			  	
+			  <li>物流相关
+			  <ul class="sub_menu">
+			  		<li><a href="#">物流招标</a></li>
+			  		<li><a href="#">物流金融</a></li>
+			  		<li><a href="#">企业招聘</a></li>
+			  		<li><a href="#">物流人才</a></li>
+
+			  	</ul></li>
+			  	
+			  <li>企业主页设置
+				  <ul class="sub_menu">
+				  		<li><a href="#">企业介绍</a></li>
+				  		
+				  	</ul>
+			  	</li>
+
+			</ul>
+		</div><!--vip_menu-->
+	</div><!--vip_left-->
+
+
+
+		<div id="vip_right">
+			<div id="breadcrumb-main">
+					<ul class="breadcrumb">
+						<li>当前位置:</li>
+						<li><a href="">在线交易</a></li>
+						<li><a href="">货源详情</a></li>
+					</ul>
+				<div id="cargo_message">
+					<h1>货源基本信息<span style="font-size: 14px;margin-left: 15px;">为提高交易效率，请尽量完善货物信息。</span></h1>
+					<table border="0">
+						<tr>
+							<td><span>*</span>货物名称：</td>
+							<td>苹果一车</td>
+						</tr>
+						<tr>
+							<td><span>*</span>始发地：</td>
+							<td>江西省南昌市红谷滩万达中心
+							<button class="btn btn-default">地图查看</button>
+
+							</td>
+							
+								
+						
+						</tr>
+						<tr>
+							<td><span>*</span>目的地：</td>
+							<td>江西省南昌市红谷滩万达中心
+							<button class="btn btn-default">地图查看</button>
+							</td>
+						</tr>
+						<tr>
+							<td>货物重量：</td>
+							<td col>2吨</td>
+							
+						</tr>
+						<tr>
+							<td>货物体积：</td>
+							<td>0.1方</td>
+						</tr>
+						<tr>
+							<td>货物类别：</td>
+							<td>
+								<select name="" id="">
+									<option value="">日用品</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>详细描述：</td>
+							<td>字数限500字以内</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td >
+								<textarea name="" id="" cols="60" rows="10"></textarea>
+							</td>
+						</tr>
+						
+					</table>
+				</div><!--cargo-message-->
+
+				<h1 style="font-size: 18px;color: #000001;">运力要求</h1><br>
+
+				<div id="lease-table" style="height: 200px;">
+				   <!--  <h1>运力要求</h1> -->
+					<a class="table-title small">指派承运方</a>
+					<a class="table-title small" style="background-color: #3AB2C3;">不指派承运方</a>
+					<div style="display: block;">
+						<table>
+							<caption>请指定熟悉的司机或物流企业，系统将通知司机或车队接单后达成交易。</caption>
+							<tr>
+								<td><span style="color: red;">*</span>指定承运方：</td>
+								<td>
+									<select name="" id="">
+										<option value="">个人司机</option>
+									</select>
+								</td>
+								<td></td>
+							</tr>
+							
+							<tr>
+								<td></td>
+								<td><input type="text"></td>
+								<td>
+									<button class="btn" type="button">选择承运方</button>
+								</td>
+							</tr>	
+						</table>
+					</div>
+
+					<div>
+						<table>
+							<caption>请选择合理的车辆要求，平台会自动匹配合适的车辆。</caption>
+								<tr>
+									<td><span style="color: red;">*</span>车辆类型：</td>
+									<td>
+										<select name="" id="">
+										<option value="">不限</option>
+									</select>
+									</td>
+									<td>提示：长*宽*高：1.7*1.1*1m，限载：1吨</td>
+								</tr>
+
+								<tr>
+									<td>时效要求：</td>
+									<td><input type="text"></td>
+									<td>指货主要求司机在多少小时内必须提货，不填表示无此要求</td>
+								</tr>
+						</table>
+					</div>
+				</div><!--lease-table-->
+				
+				<div class="contact" id="cargo_message">
+					<h1>支付方式</h1>
+					<p>线上支付（已支付） & 线下支付(现付/到付/……)</p>
+				</div><!--contact-->
+				<div class="button-group">
+					<button class="btn btn-primary distance" type="button">返回列表</button>
+					
+				</div>
+			</div><!--breadcrumb-main-->
+		</div><!--vip_right-->
+
+
+
+
+
+	</div><!--vip_content-->
+
+	<div class="footer" >
+		<div class="footer_list">
+			<p>
+			  	<a href="">国家商务部</a>
+			  	<b>|</b>
+			  	<a href="">国家发改委</a>
+			  	<b>|</b>
+			  	<a href="">家财政部</a>
+			  	<b>|</b>
+			  	<a href="">国家科技</a>
+			  	<b>|</b>
+			  	<a href="">国家交通部</a>
+			  	<b>|</b>
+			  	<a href="">江西省商务厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省发改委</a>
+			  	<b>|</b>
+			  	<a href="">江西省财政厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省科技厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省交通行</a>
+			  	<b>|</b>
+			  	<a href="">南昌公安交警网</a>
+			  	<b>|</b>
+			  	<a href="">江西省运输信息网</a>
+			</p>
+
+			<p>
+				<a href="">中华物流网</a>
+			  	<b>|</b>
+			  	<a href="">智慧流通网</a>
+			  	<b>|</b>
+			  	<a href="">物流中国</a>
+			  	<b>|</b>
+			  	<a href="">物流金融</a>
+			  	<b>|</b>
+			  	<a href="">满意网</a>
+			  	<b>|</b>
+			  	<a href="">锦程物流网</a>
+			  	<b>|</b>
+			  	<a href="">物流唐山</a>
+			  	<b>|</b>
+			  	<a href="">太原市公共信息平台</a>
+			  	<b>|</b>
+			  	<a href="">南京城市共同配送管理平台</a>
+			</p>
+		</div><!-- footer_list -->
+
+  	<div class="footer-bd">
+    <p>
+	    <a href="#">关于我们</a>
+	    <b>|</b>
+	    <a href="#">服务条款</a>
+	    <b>|</b>
+	    <a href="#">诚邀加盟</a>
+	    <b>|</b>
+	    <a href="#">联系我们</a>
+	    <b>|</b>
+	    <a href="#">APP下载</a>
+	    <b>|</b>
+	    <a href="#">投诉与建议</a>
+	    <b>|</b>
+	    <a href="#">合作伙伴</a>
+	</p>
+    <p>
+	    <span>主办：<a href="#">南昌市商务局</a></span>
+	    <b>|</b>
+	    <span>承办：<a href="#">江西尧泰供应链管理有限公司</a></span>
+	    
+    </p>
+    <p>
+    	<span>备案号：沪ICP备XXXXXX号</span>
+        <span>网站制度 证照信息公示</span>
+    </p>
+  	</div><!-- footer-bd -->
+  	</div><!--footer-->	
+
+	<script src="js/menu.js"></script>
+	
+</body>
+</html>

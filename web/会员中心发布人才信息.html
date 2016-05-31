@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>发布人才信息</title>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/common.css">
+	
+	<!-- <link rel="stylesheet" href="css/vip.css"> -->
+</head>
+<body>
+
+<!-- 网站头区域 -->
+	<div id="headerWrap">
+		<div class="header">
+			<div class="left">
+				<h1 class="logo"><img src="images/logobanner.png" alt="城市配送"></h1>
+			</div>
+
+ 			<div class="register">
+					<div class="btn-group">
+							  <button type="button" class="btn btn-primary">
+									<span class="glyphicon glyphicon-user"></span> 登录
+							  </button>
+							  <button type="button" class="btn btn-primary">
+							  		<span class="glyphicon glyphicon-star"></span> 免费注册
+							  </button>
+ 					</div>
+			</div><!--register结束-->
+
+					<div class="select_option">
+						<select name="" id="">
+				               	<option value="" selected="selected">淘货源</option>
+				               	<option value="">选车辆</option>
+				               	<option value="">找仓库</option>
+				               	<option value="">查订单</option>
+				               	<option value="">搜资讯</option>
+						</select>
+					</div>
+			<div class="right">
+				<form class="form-inline hidden-xs" role="form" action="">
+					<div class="form-group">
+				 		<div class="input-group">
+								<input type="text" class="form-control" id="name" placeholder="请输入名称">
+			                    <span class="input-group-btn">
+			                  	    <button type="button" class="btn btn-primary">
+			  							<span class="glyphicon glyphicon-search"></span> 搜索go
+									</button>
+			               		</span>
+           		 		</div><!-- /input-group -->
+					</div><!--form-group-->
+				</form>
+			</div><!--right结束-->
+
+		</div><!--header-->
+	</div><!--headerWrap结束-->
+
+
+
+	<!-- vip -->
+
+	<div id="vip_content">
+	<div id="vip_left">
+		<div id="sub_nav">会员中心</div>
+		<div id="vip_menu">
+
+			<div id="border"></div>
+			<ul id="main_menu">
+			  <li>账号管理
+
+	              	<ul class="sub_menu">
+				  		<li><a href="#">基本信息</a></li>
+				  		<li><a href="#">账号安全</a></li>
+				  		<li><a href="#">企业主页设置</a></li>
+				  	</ul>
+			  </li>
+			  	
+			  <li>资金管理
+				  <ul class="sub_menu">
+				  		<li><a href="#">账号余额</a></li>
+				  		<li><a href="#">账号充值</a></li>
+				  		<li><a href="#">账号提现</a></li>
+				  		<li><a href="#">交易记录</a></li>
+				  		<li><a href="#">银行卡管理</a></li>
+				  		
+				  	</ul>
+			  	</li>
+			  	
+			  <li>交易管理
+				  <ul class="sub_menu">
+				  	 	<li><a href="#">我的货源</a></li>
+				  	 	<li><a href="#">我的车源</a></li>
+				  	 	<li><a href="#">我的订单</a></li>
+
+				  	 </ul> 
+			  	 </li>
+			  	
+			 <!--  <li class="no_sub"><a href="#">登记末端网点</a></li>
+			  <li class="no_sub"><a href="#">物流招标</a></li>
+			  <li class="no_sub"><a href="#">信用等级</a></li> -->
+
+			  <li >物流资源
+				  <ul class="sub_menu">
+				  		<li><a href="#">我的车辆</a></li>
+				  		<li><a href="#">仓储出租</a></li>
+				  		<li><a href="#">设备供应</a></li>
+				  		<li><a href="#">设备需求</a></li>
+				  		<li><a href="#">末端网点</a></li>
+				  	</ul>
+			  	</li>
+			  	
+			  <li>物流相关
+			  <ul class="sub_menu">
+			  		<li><a href="#">物流招标</a></li>
+			  		<li><a href="#">物流金融</a></li>
+			  		<li><a href="#">企业招聘</a></li>
+			  		<li><a href="#">物流人才</a></li>
+
+			  	</ul></li>
+			  	
+			  <li>企业主页设置
+				  <ul class="sub_menu">
+				  		<li><a href="#">企业介绍</a></li>
+				  		
+				  	</ul>
+			  	</li>
+
+			</ul>
+		</div><!--vip_menu-->
+	</div><!--vip_left-->
+
+
+
+		<div id="vip_right">
+	
+			<div id="release-warehouse">
+				 <form action="" method="post" name="searchForm">
+		          	<table>
+		          		<tr>
+		          			<td><span class="strong-style">发布简历</span></td>
+		          			<td>为了让企业快速的找到您、请填写完整、准确信息</td>
+		          		</tr>
+		          	</table>
+		          	<table>
+		          		<caption style="font-size: 18px;color: #0E0E0E;">基本信息</caption>
+		            	<tr>
+		            		<td> <span  class="sign">*</span>姓名：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td>性别：</td>
+		            		<td>
+		            			<select name="" id="">
+		            				<option value="">
+		            					男
+		            				</option>
+		            				<option value="">
+		            					女
+		            				</option>
+		            			</select>
+		            		</td>
+		            	</tr>
+		            	<tr>
+		            		<td>出生日期：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td> <span  class="sign">*</span>联系方式：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td>Email：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td>地址：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            </table>
+		            <table>
+		          		<caption style="font-size: 18px;color: #0E0E0E;">求职意向</caption>
+		            	
+		            	<tr>
+		            		<td>期望从事职业：</td>
+		            		<td>
+		            			<select name="" id="">
+		            				<option value="">
+		            					物流专员/助理
+		            				</option>
+		            				
+		            			</select>
+		            		</td>
+		            	</tr>
+		            	<tr>
+		            		<td><span  class="sign">*</span>期望工作地区：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td><span  class="sign">*</span>目前状况：</td>
+		            		<td>
+		            			<select name="" id="">
+		            				<option value="">
+		            					我目前处于离职状态，可立即上岗
+		            				</option>
+		            			</select>
+		            		</td>
+		            	</tr>
+		           </table>
+		            <table>
+		          		<caption style="font-size: 18px;color: #0E0E0E;">工作经验</caption>
+		            	
+		            	
+		            	<tr>
+		            		<td>中铁物流：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td>行业类别：</td>
+		            		<td>
+		            			<select name="" id="">
+		            				<option value="">
+		            					.....
+		            				</option>
+		            			</select>
+		            		</td>
+		            	</tr>
+		            	<tr>
+		            		<td>职位名称：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td>工作时间：</td>
+		            		<td><input type="text"></td>
+		            	</tr>
+		            	<tr>
+		            		<td>工作描述</td>
+		            		<td>...</td>
+		            	</tr>
+		            	<tr>
+		            		<td></td>
+		            		<td>
+		            			<textarea name="" id="" cols="30" rows="10"></textarea>
+		            		</td>
+		            	</tr>
+		           </table>
+		           <table>
+		           		<caption style="font-size: 18px;color: #0E0E0E;">教育背景</caption>
+		           		<tr>
+		           			<td><span  class="sign">*</span>时间：</td>
+		           			<td><input type="text"></td>
+		           		</tr>
+		           		<tr>
+		           			<td><span  class="sign">*</span>学校名称：</td>
+		           			<td><input type="text"></td>
+		           		</tr>
+		           		<tr>
+		           			<td><span  class="sign">*</span>专业名称：</td>
+		           			<td><input type="text"></td>
+		           		</tr>
+		           		<tr>
+		           			<td><span  class="sign">*</span>学历：</td>
+		           			<td>
+		           				<select name="" id="">
+		            				<option value="">
+		            					本科
+		            				</option>
+		            			</select>
+		           			</td>
+		           		</tr>
+		           		<tr>
+			              	<td colspan="2">
+			                <input name="" type="button" class="button" id="" value="预览" />
+			                <input name="" type="button" class='button' value='保存' />
+			                <input name="" type="button" class='button' value='发布' />
+			                </td>
+		              	</tr>
+		           </table>
+		       	</form>
+			</div>
+
+		</div><!--vip_right-->
+
+
+
+
+
+	</div><!--vip_content-->
+
+	<div class="footer" >
+		<div class="footer_list">
+			<p>
+			  	<a href="">国家商务部</a>
+			  	<b>|</b>
+			  	<a href="">国家发改委</a>
+			  	<b>|</b>
+			  	<a href="">家财政部</a>
+			  	<b>|</b>
+			  	<a href="">国家科技</a>
+			  	<b>|</b>
+			  	<a href="">国家交通部</a>
+			  	<b>|</b>
+			  	<a href="">江西省商务厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省发改委</a>
+			  	<b>|</b>
+			  	<a href="">江西省财政厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省科技厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省交通行</a>
+			  	<b>|</b>
+			  	<a href="">南昌公安交警网</a>
+			  	<b>|</b>
+			  	<a href="">江西省运输信息网</a>
+			</p>
+
+			<p>
+				<a href="">中华物流网</a>
+			  	<b>|</b>
+			  	<a href="">智慧流通网</a>
+			  	<b>|</b>
+			  	<a href="">物流中国</a>
+			  	<b>|</b>
+			  	<a href="">物流金融</a>
+			  	<b>|</b>
+			  	<a href="">满意网</a>
+			  	<b>|</b>
+			  	<a href="">锦程物流网</a>
+			  	<b>|</b>
+			  	<a href="">物流唐山</a>
+			  	<b>|</b>
+			  	<a href="">太原市公共信息平台</a>
+			  	<b>|</b>
+			  	<a href="">南京城市共同配送管理平台</a>
+			</p>
+		</div><!-- footer_list -->
+
+  	<div class="footer-bd">
+    <p>
+	    <a href="#">关于我们</a>
+	    <b>|</b>
+	    <a href="#">服务条款</a>
+	    <b>|</b>
+	    <a href="#">诚邀加盟</a>
+	    <b>|</b>
+	    <a href="#">联系我们</a>
+	    <b>|</b>
+	    <a href="#">APP下载</a>
+	    <b>|</b>
+	    <a href="#">投诉与建议</a>
+	    <b>|</b>
+	    <a href="#">合作伙伴</a>
+	</p>
+    <p>
+	    <span>主办：<a href="#">南昌市商务局</a></span>
+	    <b>|</b>
+	    <span>承办：<a href="#">江西尧泰供应链管理有限公司</a></span>
+	    
+    </p>
+    <p>
+    	<span>备案号：沪ICP备XXXXXX号</span>
+        <span>网站制度 证照信息公示</span>
+    </p>
+  	</div><!-- footer-bd -->
+  	</div><!--footer-->	
+<script src="js/menu.js"></script>
+	
+</body>
+</html>

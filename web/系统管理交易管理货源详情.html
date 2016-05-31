@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>系统管理交易管理货源详情</title>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+    <meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/bread.css">
+	<!-- <link rel="stylesheet" href="css/vip.css"> -->
+	<script>
+		$(function(){
+
+		$('#lease-table>a').click(function(){
+				$('#lease-table>div').hide();
+				$('#lease-table>div').eq($(this).index()).show();
+				// alert($(this).index());
+			});	
+})
+
+	</script>
+	<style type="text/css">
+		#lease-table table{
+			margin-left: 30px;
+    		width: 500px;
+		}
+		#lease-table table tr{
+			border-bottom: none;
+		}
+		#breadcrumb-main .button-group {
+    		text-align: initial;
+    		padding-left: 290px;
+}
+	</style>
+</head>
+<body>
+
+<!-- 网站头区域 -->
+	<div id="headerWrap">
+		<div class="header">
+			<div class="left">
+				<h1 class="logo"><img src="images/logobanner.png" alt="城市配送"></h1>
+			</div>
+
+ 			<!-- <div class="register">
+					<div class="btn-group">
+							  <button type="button" class="btn btn-primary">
+									<span class="glyphicon glyphicon-user"></span> 登录
+							  </button>
+							  <button type="button" class="btn btn-primary">
+							  		<span class="glyphicon glyphicon-star"></span> 免费注册
+							  </button>
+ 					</div>
+			</div> --><!--register结束-->
+
+					<div class="select_option">
+						<select name="" id="">
+				               	<option value="" selected="selected">淘货源</option>
+				               	<option value="">选车辆</option>
+				               	<option value="">找仓库</option>
+				               	<option value="">查订单</option>
+				               	<option value="">搜资讯</option>
+						</select>
+					</div>
+			<div class="right">
+				<form class="form-inline hidden-xs" role="form" action="">
+					<div class="form-group">
+				 		<div class="input-group">
+								<input type="text" class="form-control" id="name" placeholder="请输入名称">
+			                    <span class="input-group-btn">
+			                  	    <button type="button" class="btn btn-primary">
+			  							<span class="glyphicon glyphicon-search"></span> 搜索go
+									</button>
+			               		</span>
+           		 		</div><!-- /input-group -->
+					</div><!--form-group-->
+				</form>
+			</div><!--right结束-->
+
+		</div><!--header-->
+	</div><!--headerWrap结束-->
+
+
+
+	<!-- vip -->
+
+	<div id="vip_content">
+	<div id="vip_left">
+		<div id="sub_nav">功能列表</div>
+		<div id="vip_menu">
+
+			<div id="border"></div>
+			<ul id="main_menu">
+			  <li>政务管理
+
+	              <ul class="sub_menu">
+				  		<li><a href="#">图文资讯</a></li>
+				  		<li><a href="#">政务公告</a></li>
+				  		<li><a href="#">政务法规</a></li>
+				  		
+				  	</ul>
+			  </li>
+			  	
+			  <li>信息管理
+				  <ul class="sub_menu">
+				  		<li><a href="#">货源审核</a></li>
+				  		<li><a href="#">车源审核</a></li>
+				  		<li><a href="#">仓储管理</a></li>
+				  		<li><a href="#">托盘审核</a></li>
+				  		<li><a href="#">设备</a></li>
+				  		<li><a href="#">招标</a></li>
+				  		<li><a href="#">招聘</a></li>
+                        <li><a href="#">人才</a></li>
+                        <li><a href="#">企业展示</a></li>
+				  	</ul>
+			  	</li>
+			  	
+			  <li>会员管理
+				  <ul class="sub_menu">
+				  	 	<li><a href="#">会员管理</a></li>
+				  	 	<li><a href="#">企业管理</a></li>
+                        <li><a href="#">企业资料审核</a></li>
+
+				  	 </ul> 
+			  	 </li>
+			  	
+			 <li>诚信管理
+				  <ul class="sub_menu">
+				  	 	<li><a href="#">诚信排名</a></li>
+				  	 	<li><a href="#">诚信参数设置</a></li>
+				  	 </ul> 
+			  	 </li>
+                 
+                 <li>资金管理
+				  <ul class="sub_menu">
+				  	 	<li><a href="#">交易流水查询</a></li>
+				  	 	<li><a href="#">会员查询</a></li>
+                        <li><a href="#">提现查询</a></li>
+
+				  	 </ul> 
+			  	 </li>
+                 
+                 <li>广告管理
+				  <ul class="sub_menu">
+				  	 	<li><a href="#">广告位管理</a></li>
+				  	 </ul> 
+			  	 </li>
+
+			  <li >内容管理
+				  <ul class="sub_menu">
+				  		<li><a href="#">平台公告</a></li>
+                        <li><a href="#">便民链接</a></li>
+                        <li><a href="#">友情链接</a></li>
+                        <li><a href="#">网站协议</a></li>
+                     
+				  	</ul>
+			  	</li>
+			  	
+			  <li>数据基础
+			  <ul class="sub_menu">
+			  		<li><a href="#">行政区域维护</a></li>
+			  		<li><a href="#">车辆类型维护</a></li>
+			  	
+
+			  	</ul></li>
+			  	
+			  <li>员工管理
+				  <ul class="sub_menu">
+				  		<li><a href="#">人员管理</a></li>
+				  		<li><a href="#">角色管理</a></li>
+				  	</ul>
+			  	</li>
+                
+                 <li>系统管理
+				  <ul class="sub_menu">
+				  		<li><a href="#">参数设置</a></li>
+				  		<li><a href="#">修改密码</a></li>
+                        <li><a href="#">短信记录</a></li>
+				  	</ul>
+			  	</li>
+
+			</ul>
+		</div><!--vip_menu-->
+	</div><!--vip_left-->
+
+
+
+		<div id="vip_right">
+
+			<div id="breadcrumb-main">
+					<ul class="breadcrumb">
+						<li>当前位置:</li>
+						<li><a href="">交易管理</a></li>
+						<li><a href="">货源查询</a></li>
+						<li><a href="">货源详情</a></li>
+					</ul>
+				<div id="cargo_message">
+					<table>
+						<tr>
+							<td>发布时间：</td>
+							<td>2016年4月14日160:30:28</td>
+						</tr>
+						<tr>
+							<td>发布人姓名：</td>
+							<td>王先生  &  绿滋肴</td>
+						</tr>
+						<tr>
+							<td>发布人电话：</td>
+							<td>123456789</td>
+						</tr>
+					</table>
+				</div>	
+				<div id="cargo_message">
+					<h1>货源基本信息<span style="font-size: 14px;margin-left: 15px;">为提高交易效率，请尽量完善货物信息。</span></h1>
+					<table border="0">
+						<tr>
+							<td>货物名称：</td>
+							<td>苹果一车</td>
+						</tr>
+						<tr>
+							<td>始发地：</td>
+							<td>
+								<dl>
+									<dd>江西省南昌市红谷滩万达中心</dd>
+									<dt><a href="">地图查看</a></dt>
+									
+								</dl>
+							</td>
+						</tr>
+						<tr>
+							<td>目的地：</td>
+							<td>
+								<dl>
+									<dd>江西省南昌市西湖区</dd>
+									<dt><a href="">地图查看</a></dt>
+									
+								</dl>
+							</td>
+						</tr>
+						<tr>
+							<td>货物重量：</td>
+							<td>
+								<dl>
+									<dd>2吨</dd>
+									
+									<dt style="margin-left: 26px;">货物体积：</dt>
+									
+									<dd>0.1方</dd>
+								</dl>
+							</td>
+						</tr>
+						<tr>
+							<td>货物类别：</td>
+							<td>
+								水果蔬菜
+							</td>
+						</tr>
+						<tr>
+							<td>详细描述：</td>
+							<td>字数限500字以内</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<textarea name="" id="" cols="60" rows="10"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>运价：</td>
+							<td>200元&电议</td>
+						</tr>
+						<tr>
+							<td>时效要求：</td>
+							<td>“要求司机在2小时内必须提货”  或者显示 “无此要求”</td>
+						</tr>
+					</table>
+				</div><!--cargo-message-->
+
+				<h1 style="font-size: 18px;color: #000001;">运力要求</h1><br>
+
+				<div id="lease-table" style="height: 144px;">
+				   <!--  <h1>运力要求</h1> -->
+					<a class="table-title small">指派承运方</a>
+					<a class="table-title small" style="background-color: #3AB2C3;">不指派承运方</a>
+					<div style="display: block;">
+						<table style="width: 300px;">
+							
+							<tr>
+								<td>指定承运方：</td>
+								<td></td>
+								
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<ul>
+										<li>物流企业</li>
+										<li>沃尔玛物流</li>
+									</ul>
+								</td>
+							</tr>
+							
+						</table>
+					</div>
+
+					<div>
+						<table>
+							
+								<tr>
+									<td>车辆类型：</td>
+									
+									<td>小面包车：长*宽*高：1.7*1.1*1m，限载：1吨</td>
+								</tr>
+
+								<tr>
+									<td>运输类型：</td>
+									<td>不限  或  整车  或   零担</td>
+								
+								</tr>
+						</table>
+					</div>
+				</div><!--lease-table-->
+				
+				<div class="button-group">
+					<button class="btn btn-primary distance" type="button">返回列表</button>
+				
+				</div>
+				
+			</div><!--breadcrumb-main-->
+
+		</div><!--vip_right-->
+
+
+
+
+
+	</div><!--vip_content-->
+
+	<div class="footer" >
+		<div class="footer_list">
+			<p>
+			  	<a href="">国家商务部</a>
+			  	<b>|</b>
+			  	<a href="">国家发改委</a>
+			  	<b>|</b>
+			  	<a href="">家财政部</a>
+			  	<b>|</b>
+			  	<a href="">国家科技</a>
+			  	<b>|</b>
+			  	<a href="">国家交通部</a>
+			  	<b>|</b>
+			  	<a href="">江西省商务厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省发改委</a>
+			  	<b>|</b>
+			  	<a href="">江西省财政厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省科技厅</a>
+			  	<b>|</b>
+			  	<a href="">江西省交通行</a>
+			  	<b>|</b>
+			  	<a href="">南昌公安交警网</a>
+			  	<b>|</b>
+			  	<a href="">江西省运输信息网</a>
+			</p>
+
+			<p>
+				<a href="">中华物流网</a>
+			  	<b>|</b>
+			  	<a href="">智慧流通网</a>
+			  	<b>|</b>
+			  	<a href="">物流中国</a>
+			  	<b>|</b>
+			  	<a href="">物流金融</a>
+			  	<b>|</b>
+			  	<a href="">满意网</a>
+			  	<b>|</b>
+			  	<a href="">锦程物流网</a>
+			  	<b>|</b>
+			  	<a href="">物流唐山</a>
+			  	<b>|</b>
+			  	<a href="">太原市公共信息平台</a>
+			  	<b>|</b>
+			  	<a href="">南京城市共同配送管理平台</a>
+			</p>
+		</div><!-- footer_list -->
+
+  	<div class="footer-bd">
+    <p>
+	    <a href="#">关于我们</a>
+	    <b>|</b>
+	    <a href="#">服务条款</a>
+	    <b>|</b>
+	    <a href="#">诚邀加盟</a>
+	    <b>|</b>
+	    <a href="#">联系我们</a>
+	    <b>|</b>
+	    <a href="#">APP下载</a>
+	    <b>|</b>
+	    <a href="#">投诉与建议</a>
+	    <b>|</b>
+	    <a href="#">合作伙伴</a>
+	</p>
+    <p>
+	    <span>主办：<a href="#">南昌市商务局</a></span>
+	    <b>|</b>
+	    <span>承办：<a href="#">江西尧泰供应链管理有限公司</a></span>
+	    
+    </p>
+    <p>
+    	<span>备案号：沪ICP备XXXXXX号</span>
+        <span>网站制度 证照信息公示</span>
+    </p>
+  	</div><!-- footer-bd -->
+  	</div><!--footer-->	
+	<script>
+	
+			 page({
+				id : 'page-link',
+				nowPage :1,//当前页
+				allPage : 10,//总页数
+				callBack : function(now,all){
+					
+				}
+			});
+
+		});
+
+	</script>
+	<script src="js/menu.js"></script>
+	<script type="text/javascript" src="js/paging.js"></script>
+</body>
+</html>
