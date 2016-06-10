@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>closure</title>
+	<style>
+		.btn{
+			width:50px;
+			height:30px;
+			margin: 5px;
+			border: 1px solid #123555;
+		}
+		.btn:hover{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="btn">1</div>
+	<div class="btn">2</div>
+	<div class="btn">3</div>
+	<script>
+		window.onload=function(){
+			function Count(){
+			var btn = document.getElementsByClassName("btn");
+			var c=0;
+				console.log(btn);
+				for(i=0;i<btn.length;i++){
+					(function(i){
+
+						btn[i].onclick=function(){
+							c++;
+							console.log(c);
+							
+						}
+					
+							
+					})(i)
+					
+				}
+			}
+		
+			
+			Count();
+			
+			
+		}
+	</script>
+</body>
+</html>
