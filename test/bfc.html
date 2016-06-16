@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>两列布局，右边宽度自适应</title>
+	<style>
+	.warp{
+		width: 800px;
+		
+		outline:1px solid #123555;
+		overflow: auto;
+
+	}
+	.left{
+		background-color: pink;
+		width:300px;
+		height: 400px;
+		float: left;
+
+	}
+	.right{
+		background-color: #ddd;
+		overflow: auto;
+
+	}
+	</style>
+</head>
+<body>
+<div class="warp">
+	<div class="left">我是固定宽</div>
+	<div class="right">我是自适应</div>
+
+</div>
+	
+</body>
+</html>
