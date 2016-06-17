@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>flexbox两列布局，右边宽度自适应</title>
+    <title>flexbox</title>
     <style>
     .parent {
         display: flex;
@@ -10,6 +10,7 @@
         flex-flow: row wrap;
         -ms-flex-flow: row wrap;
         -webkit-flex-flow: row wrap;
+
         /*row横向布局,wrap一行无法显示时，在新一行显示*/
     }
     .right {
@@ -23,12 +24,73 @@
         -ms-flex: 1;
         background-color: gray;
     }
+/* ---------------------------------------- */
+    #line {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    -ms-flex-flow: row;
+    -webkit-flex-flow: row;
+    /*横向布局*/
+    }
+    #div1,
+    #div3 {
+        width: 300px;
+        height: 200px;
+        background-color: #123555;
+    }
+    #div2 {
+        flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        background-color: pink;
+    }
+    /* ----------------------------------------------------------- */
+    .lab{
+        width: 100%;
+        display:flex;
+        display: -webkit-flex;
+        flex-flow: row;
+        -ms-flex-flow: row;
+        -webkit-flex-flow: row;
+    }
+    #name{/*input的输入框自适应剩余宽度*/
+        flex: 1;
+        -ms-flex: 1;
+        -webkit-flex: 1;
+    }
+    /*label中的文字右对齐*/
+    label {
+        width: 100px;  
+        text-align: right;
+        display: inline-block;
+    }
     </style>
 </head>
 <body>
-    <div class="parent">
-    <div class="right"></div>
-    <div class="left"></div>
-</div>
+    <!-- 一行两个div，一个宽高固定，另一个自动填充界面剩余宽度 -->
+        <div class="parent">
+        <div class="right"></div>
+        <div class="left"></div>
+        
+    </div>
+    <hr>
+
+    <!-- 一行中有三个DIV，左右两个div宽高已知，中间div自动填充界面剩余宽度 -->
+    <div id="line">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+    <hr>
+
+    <!--结合display：flex实现input输入框自适应剩余宽度，使得label和input一直在一行中-->
+    <div class="lab">
+        <label for="name">用户名：</label>
+        <input type="text" id="name" placeholder="请输入用户名" />
+    </div>
+
+    
 </body>
 </html>
