@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>居中</title>
+	<style>
+
+	.outb{
+		position: relative;
+		height: 200px;
+		width: 200px;
+		background-color: #E74851;
+		
+	}
+	#block{
+
+		width: 100px;
+		height:100px;
+		background:pink;
+		position:absolute;
+		left:50%;
+		top:50%;
+		transform: translate(-50%,-50%); 
+		-ms-transform: translate(-50%,-50%);		/* IE9及以上支持 */
+		-webkit-transform: translate(-50%,-50%);	/* Safari and Chrome */
+		-o-transform: translate(-50%,-50%);		/* Opera */
+		-moz-transform: translate(-50%,-50%);		/* Firefox */
+	}
+	
+
+	.parent{
+		box-sizing: border-box;
+		display: flex;
+		display: -webkit-flex;
+		height: 200px;
+		width: 200px;
+		border: 1px #123555 solid;
+		align-items: center;		/*垂直*/
+		justify-content: center;		/*水平*/
+	}
+	#flexb{
+
+		width: 0px;
+		border-width: 50px;
+		border-style:solid;
+		border-color: #123555 #E74851 #7DB1CC #ffb555;
+		
+	}
+
+	/* ----------- */
+	#triangle{
+		width: 0px;
+		border-width: 50px;
+		border-style:solid;
+		border-color: #123555 #E74851 #7DB1CC #ffb555; 
+	}
+	
+	</style>
+</head>
+<body>
+<div class="outb">
+	<div id="block"></div>
+</div>
+	<hr>
+
+
+<div class="parent">
+	<div id="flexb"></div>
+</div>
+<hr>
+<div id="triangle"></div>
+</body>
+</html>
