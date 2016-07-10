@@ -21,7 +21,7 @@
 		left:50%;
 		top:50%;
 		transform: translate(-50%,-50%); 
-		-ms-transform: translate(-50%,-50%);		/* IE8及以上支持 */
+		-ms-transform: translate(-50%,-50%);		/* IE9及以上支持 */
 		-webkit-transform: translate(-50%,-50%);	/* Safari and Chrome */
 		-o-transform: translate(-50%,-50%);		/* Opera */
 		-moz-transform: translate(-50%,-50%);		/* Firefox */
@@ -73,24 +73,7 @@
 
 <!--[if lt IE 9]>
 	<script>	
-	if(!document.getElementsByClassName){
-	    document.getElementsByClassName = function(className, element){
-	        var children = (element || document).getElementsByTagName('*');
-	        var elements = new Array();
-	        for (var i=0; i<children.length; i++){
-	            var child = children[i];
-	            var classNames = child.className.split(' ');
-	            for (var j=0; j<classNames.length; j++){
-	                if (classNames[j] == className){ 
-	                    elements.push(child);
-	                    break;
-	                }
-	            }
-	        } 
-	        return elements;
-	    };
-	}
-		var outb = document.getElementsByClassName('outb')[0];
+		var outb = document.querySelector('.outb');
 		var block = document.getElementById('block');
 		
 
