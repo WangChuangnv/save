@@ -21,17 +21,18 @@
 		left:50%;
 		top:50%;
 		transform: translate(-50%,-50%); 
-		-ms-transform: translate(-50%,-50%);		/* IE9及以上支持 */
+		-ms-transform: translate(-50%,-50%);		/* IE8及以上支持 */
 		-webkit-transform: translate(-50%,-50%);	/* Safari and Chrome */
 		-o-transform: translate(-50%,-50%);		/* Opera */
 		-moz-transform: translate(-50%,-50%);		/* Firefox */
 	}
 	
 
-	.parent{
+	#parent{
 		box-sizing: border-box;
 		display: flex;
 		display: -webkit-flex;
+		display: -ms-flex;
 		height: 200px;
 		width: 200px;
 		border: 1px #123555 solid;
@@ -39,12 +40,11 @@
 		justify-content: center;		/*水平*/
 	}
 	#flexb{
-
 		width: 0px;
 		border-width: 50px;
 		border-style:solid;
 		border-color: #123555 #E74851 #7DB1CC #ffb555;
-		
+		font-size: 0;//兼容IE7及以下
 	}
 
 	/* ----------- */
@@ -52,7 +52,8 @@
 		width: 0px;
 		border-width: 50px;
 		border-style:solid;
-		border-color: #123555 #E74851 #7DB1CC #ffb555; 
+		border-color: transparent #E74851 transparent transparent; 
+		font-size: 0;//兼容IE7及以下
 	}
 	
 	</style>
@@ -64,10 +65,53 @@
 	<hr>
 
 
-<div class="parent">
+<div id="parent">
 	<div id="flexb"></div>
 </div>
 <hr>
 <div id="triangle"></div>
+
+<!--[if lt IE 9]>
+	<script>	
+	if(!document.getElementsByClassName){
+	    document.getElementsByClassName = function(className, element){
+	        var children = (element || document).getElementsByTagName('*');
+	        var elements = new Array();
+	        for (var i=0; i<children.length; i++){
+	            var child = children[i];
+	            var classNames = child.className.split(' ');
+	            for (var j=0; j<classNames.length; j++){
+	                if (classNames[j] == className){ 
+	                    elements.push(child);
+	                    break;
+	                }
+	            }
+	        } 
+	        return elements;
+	    };
+	}
+		var outb = document.getElementsByClassName('outb')[0];
+		var block = document.getElementById('block');
+		
+
+		block.style.top=(outb.offsetHeight-block.offsetHeight)/2+"px";
+		block.style.left=(outb.offsetWidth-block.offsetWidth)/2+"px";
+
+		
+		console.log("lt IE 9");
+	</script>
+<![endif]-->
+
+<!--[if lt IE 10]>
+	<script>
+		var parent = document.getElementById("parent");
+		var flexb = document.getElementById("flexb");
+		parent.style.position='relative';
+		flexb.style.position='absolute';
+		flexb.style.top=(parent.offsetHeight-flexb.offsetHeight)/2+"px";
+		flexb.style.left=(parent.offsetWidth-flexb.offsetWidth)/2+"px";
+		console.log("lt IE 10");
+		</script>
+<![endif]-->
 </body>
 </html>
