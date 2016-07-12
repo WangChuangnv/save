@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin center</title>
+	<style>
+	.father{
+		height: 200px;
+		width: 100%;
+		/* writing-mode: horizontal-tb;  正常
+		writing-mode: vertical-rl; 		垂直从右到左*/	
+		writing-mode: vertical-lr;
+		background: pink;
+	}
+	.son{
+		height: 100px;
+		width: 500px;
+		margin: auto;
+		background: #eee;
+	}
+
+	.father1{
+		height:200px;
+		position: relative;
+		background: #7db1cc;
+	}
+	.son1{
+		position:absolute;
+		top:0;
+		right: 0;
+		bottom:0;
+		left: 0;
+		height:100px;
+		width:500px;
+		background: pink;
+		margin:auto;
+	}
+
+	
+	.box{
+		width:1200px;
+		margin:auto;
+		background-color: orange;
+	}
+	.ul{
+		overflow: hidden;
+		margin-right: -20px;
+	}
+	.li{
+		width: 386.66px;
+		margin-right:20px;
+		background: green;
+		float:left;
+	}
+	</style>
+</head>
+<body>
+	<!-- writing-mode与垂直居中 -->
+	<div class="father">
+		<div class="son"></div>
+	</div>
+<hr>
+	<!-- absolute与margin居中 -->
+	<div class="father1">
+		<div class="son1">IE8+</div>
+	</div>
+<hr>
+	<div class="box">
+		<div class="ul">
+			<div class="li">1</div>
+			<div class="li">2</div>
+			<div class="li">3</div>
+		</div>
+	</div>
+
+<hr>
+<div style="float: left; width: 100%; background: pink">	
+<p style='margin-right: 150px;'>图片右浮动，文字自然环绕效果。①transition是支持visibility这个属性的； ②visibility: 离散步骤，在0到1数字范围之内，0表示“隐藏”，1表示完全“显示”；所以产生上述2S后消失但是无渐变的效果。 此外：... </p>
+</div>
+<img src="default.jpg" width="150px" style="float: right; margin-left: -150px;">	
+<!-- 因为img宽为150px 偏移过去了 就是0 -->
+</body>
+</html>
