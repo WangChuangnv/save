@@ -4,6 +4,16 @@
 	<meta charset="UTF-8">
 	<title>css</title>
 	<style>
+	body{
+		font-size:12px;
+		text-indent:3em;
+	}
+	p{
+		
+	}
+	.show{
+		display:block;
+	}
 	.out{
 		border:1px solid #123555;
 		width: 100px;
@@ -11,13 +21,22 @@
 	}
 		.just{text-align: justify;}
 	}
+
 	</style>
 </head>
 <body>
+<p>测试测试
+<span class="show">block</span>
+</p>
+<!-- <p>测试测试2</p>
 <div class="out">
 	<div class="just">text-align：justify;在两端对齐文本中，文本行的左右两端都放在父元素的内边界上。然后，调整单词和字母间的间隔，使各行的长度恰好相等。但是最后一行（或者只有一行的时候）没有两端对齐。</div>
 </div>
-
+ -->
 	
+	<script>
+		var t = document.querySelectorAll(".show");
+		console.log(t);
+	</script>
 </body>
 </html>
