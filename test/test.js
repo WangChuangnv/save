@@ -70,4 +70,3 @@ function sayColor(){
 o.sayColor=sayColor;
 o.sayColor();*/
 
-console.log(typeof null)
