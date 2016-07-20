@@ -11,7 +11,7 @@ else{
 function testProperty(property){
 	var root = document.documentElement;
 	if(property in root.style){
-		root.claddlist.add(property.toLowerCase());
+		root.classlist.add(property.toLowerCase());
 		return true;
 	}
 	root.claddlist.add('no-'property.toLowerCase());
