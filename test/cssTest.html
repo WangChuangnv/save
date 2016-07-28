@@ -25,18 +25,16 @@
 	</style>
 </head>
 <body>
-<p>测试测试
-<span class="show">block</span>
-</p>
-<!-- <p>测试测试2</p>
-<div class="out">
-	<div class="just">text-align：justify;在两端对齐文本中，文本行的左右两端都放在父元素的内边界上。然后，调整单词和字母间的间隔，使各行的长度恰好相等。但是最后一行（或者只有一行的时候）没有两端对齐。</div>
-</div>
- -->
-	
-	<script>
-		var t = document.querySelectorAll(".show");
-		console.log(t);
-	</script>
+<div id="btn">click me</div>
 </body>
+<script>
+	var btn=document.getElementById("btn");
+	btn.addEventListener("click",function(){
+		alert(this.id);	},false);
+	btn.addEventListener("click",function(){
+		alert("hello!")
+	}，false)
+	/*这两个事件处理程序按照他们的顺序触发*/
+
+</script>
 </html>
