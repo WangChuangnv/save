@@ -70,3 +70,8 @@ function sayColor(){
 o.sayColor=sayColor;
 o.sayColor();*/
 
+var obj = {a : 1}; 
+(function (obj) {  obj = {a : 2};
+console.log(obj) //2  局部对象指向一个新对象
+})(obj);
+console.log(obj)//1
