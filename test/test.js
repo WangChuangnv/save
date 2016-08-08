@@ -70,8 +70,45 @@ function sayColor(){
 o.sayColor=sayColor;
 o.sayColor();*/
 
-var obj = {a : 1}; 
+/*var obj = {a : 1}; 
 (function (obj) {  obj = {a : 2};
 console.log(obj) //2  局部对象指向一个新对象
 })(obj);
-console.log(obj)//1
+console.log(obj)//1*/
+
+/*function f1(){
+　　　　var n=999;
+　　　　nAdd=function(){n+=1}
+　　　　function f2(){
+　　　　　　console.log(n);
+　　　　}
+　　　　return f2;
+　　}
+　　var result=f1();
+　　result(); // 999
+　　nAdd();
+　　result(); // 1000*/
+
+
+　　var name = "The Window";
+　　var object = {
+　　　 name : "My Object",
+　　　　getNameFunc : function(){
+　　　　　　return function(){
+　　　　　　　　return this.name;
+　　　　　　};
+　　　　}
+　　};
+　　console.log(object.getNameFunc()()); //undefined
+/*
+var name = "The Window";
+　　var object = {
+　　　　name : "My Object",
+　　　　getNameFunc : function(){
+　　　　　　var that = this;
+　　　　　　return function(){
+　　　　　　　　return that.name;
+　　　　　　};
+　　　　}
+　　};
+　　console.log(object.getNameFunc()());//My Object*/
